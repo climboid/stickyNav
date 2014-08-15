@@ -11,7 +11,9 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 }
 
 .fixPriceTicket{
-    padding:0;
+    @media(max-width:$screen-xs-max){
+        padding:0;
+    }
 }
 .priceTicket{
     @media(max-width:$screen-xs-max){
