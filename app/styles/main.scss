@@ -1,0 +1,36 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+
+// bower:scss
+@import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+.left{
+    background: blue;
+}
+
+.fixPriceTicket{
+    padding:0;
+}
+.priceTicket{
+    @media(max-width:$screen-xs-max){
+        position: fixed;
+        bottom:0;
+        height:73px;
+        .header{
+            padding:5px 20px;
+            background: red;
+        }
+        .body{
+            padding:20px;
+            overflow: scroll;
+            max-height: 100%;
+            background: white;
+        }
+        &.open{
+            top:0;
+            height: 100%;
+        }
+    }
+}
