@@ -6,37 +6,61 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
+.container{
+    background:LightYellow;
+}
+
 .fixPriceTicket{
     @media(max-width:$screen-xs-max){
         padding:0;
     }
 }
+
+.left{
+    padding-bottom:40%;
+    @media(min-width:$screen-sm-min){
+        padding-bottom:0;
+    }
+}
 .priceTicket{
     position: fixed;
-    bottom:240px;
+    max-width: 360px;
+    width:100%;
     .body{
         padding:20px;
-        overflow: scroll;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
         max-height: 768px;
-        background: white;
+        background: lightblue;
+    }
+    @media(min-width:$screen-sm-min){
+        width:220px;
+    }
+    @media(min-width:$screen-md-min){
+        width:290px;
     }
     @media(max-width:$screen-xs-max){
         bottom:0px;
+        max-width:none;
         .header{
-            padding:5px 20px;
-            background: red;
+            padding:5px 10px;
+            background: gold;
         }
         .body{
             height:1px; //do not remove
-            padding: 0;
+            padding:0;
         }
         &.open{
             top:0;
             height: 100%;
             .body{
-                height: 88%;
-                background: blue;
+                min-height: 100%;
+                background: lightblue;
+                padding: 20px 20px 25% 20px;
             }
         }
+    }
+    @media(min-width:$screen-sm-min){
+        top:50px;
     }
 }
