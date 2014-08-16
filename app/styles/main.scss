@@ -51,7 +51,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
             padding:0;
         }
         &.open{
-            top:0;
+            top:1px;
             height: 100%;
             .body{
                 min-height: 100%;
