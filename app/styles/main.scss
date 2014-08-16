@@ -6,33 +6,37 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
-.left{
-    background: blue;
-}
-
 .fixPriceTicket{
     @media(max-width:$screen-xs-max){
         padding:0;
     }
 }
 .priceTicket{
+    position: fixed;
+    bottom:240px;
+    .body{
+        padding:20px;
+        overflow: scroll;
+        max-height: 768px;
+        background: white;
+    }
     @media(max-width:$screen-xs-max){
-        position: fixed;
-        bottom:0;
-        height:73px;
+        bottom:0px;
         .header{
             padding:5px 20px;
             background: red;
         }
         .body{
-            padding:20px;
-            overflow: scroll;
-            max-height: 100%;
-            background: white;
+            height:1px; //do not remove
+            padding: 0;
         }
         &.open{
             top:0;
             height: 100%;
+            .body{
+                height: 88%;
+                background: blue;
+            }
         }
     }
 }
